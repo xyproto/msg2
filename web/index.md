@@ -27,7 +27,12 @@ favicon: msg2.ico
 
 ## Download
 
-* [msg2-1.2.0.tar.xz](msg2-1.22.0.tar.xz)
+* [msg2-1.2.0.tar.xz](msg2-1.2.0.tar.xz)
+
+## Distro Packages
+
+* Void Linux: `msg2`
+* Arch Linux: `msg2` (in AUR)
 
 ## Version
 
