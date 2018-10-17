@@ -1,6 +1,6 @@
 # msg2
 
-Output a colored message.
+Output a blue arrow follwed by a white message.
 
 ## Screenshot
 
@@ -8,8 +8,12 @@ Output a colored message.
 
 ## Version
 
-* 1.0.0
+* 1.0.1
 
 ## License
 
 * GPLv3
+
+## Author
+
+* Alexander F. Rødseth &lt;xyproto@archlinux.org&gt;
