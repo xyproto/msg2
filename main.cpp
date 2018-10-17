@@ -4,7 +4,7 @@
 
 using namespace std::string_literals;
 
-const auto versionString = "msg2 1.1.0"s;
+const auto versionString = "msg2 1.2.0"s;
 
 const auto red = "\033[1;31m"s;
 const auto blue = "\033[1;34m"s;

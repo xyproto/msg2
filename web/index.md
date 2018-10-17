@@ -27,11 +27,11 @@ favicon: msg2.ico
 
 ## Download
 
-* [msg2-1.1.0.tar.xz](msg2-1.1.0.tar.xz)
+* [msg2-1.2.0.tar.xz](msg2-1.22.0.tar.xz)
 
 ## Version
 
-* 1.1.0
+* 1.2.0
 
 ## License
 
