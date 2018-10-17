@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# Build directories
+build/
+
+# Backup files
+*.bak
+*.tmp
+*.swp
+*~
