@@ -29,10 +29,11 @@ auto main(int argv, char** args) -> int
     ss << "  "s << blue << "->"s << bold;
 
     // If the first argument is a string containing one or more "%s",
-    // use it as a format string where "%s" are replaced by the following arguments.
+    // use it as a format string where "%s"'s are replaced by the
+    // following arguments.
     if (argv > 1 && contains(args[1], "%s"s)) {
         std::string s = args[1];
-        while (argv > 1 && contains(s, "%s"s)) {
+        while (contains(s, "%s"s)) {
             for (auto i = 2; i < argv; ++i) {
                 auto pos = s.find("%s"s);
                 if (pos != std::string::npos) {
@@ -50,6 +51,7 @@ auto main(int argv, char** args) -> int
                     std::exit(EXIT_FAILURE);
                 }
             }
+            // All instances of "%s" should now be replaced
             if (contains(s, "%s"s)) {
                 // Create a space separated string from the following arguments
                 std::stringstream argss;
