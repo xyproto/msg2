@@ -30,6 +30,7 @@
 *.exe
 *.out
 *.app
+msg2
 
 # Build directories
 build/
