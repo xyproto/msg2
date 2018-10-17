@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Niramit');
+
+body {
+  background: #404040;
+  color: #e0e0e0;
+  margin: 4em;
+  font-family: 'Niramit',helvetica,sans-serif;
+}
+
+a {
+  color: #33cc99;
+}
+
+a:visited {
+  color: #23bc89;
+}
+
+a:hover {
+  color: #43dca9;
+}
