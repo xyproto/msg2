@@ -3,8 +3,15 @@
 
 using namespace std::string_literals;
 
+const auto versionString = "msg2 1.0.1"s;
+
 auto main(int argv, char** args) -> int
 {
+    if (argv > 1 && args[1] == "--version"s) {
+        std::cout << versionString << std::endl;
+        return 0;
+    }
+
     std::stringstream ss;
 
     // Prepare a blue arrow followed by white text
