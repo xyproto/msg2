@@ -15,6 +15,11 @@
 * This utility provides the same functionality, but *should* be unproblematic, from the viewpoint of `namcap`.
 * Makes `msg2` available to any distro, not just Arch Linux.
 
+## Distro Packages
+
+* Void Linux: `msg2`
+* Arch Linux: `msg2` (in AUR)
+
 ## Version
 
 * 1.2.0
