@@ -1,10 +1,18 @@
 # msg2
 
-Output a blue arrow follwed by a white message.
+* A way to output a blue arrow and a white message on the commandline.
+* A commandline utility written in C++.
 
 ## Screenshot
 
 ![screenshot](img/screenshot.png)
+
+## Why?
+
+* `msg2` is already available in `PKGBUILD` packages in Arch Linux, as a `bash` function.
+* Recently, `namcap` has begun to discourage the use.
+* This utility provides the same functionality, but *should* be unproblematic, from the viewpoint of `namcap`.
+* Makes `msg2` available to any distro, not just Arch Linux.
 
 ## Version
 
