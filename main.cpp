@@ -7,8 +7,8 @@ using namespace std::string_literals;
 const auto versionString = "msg2 1.1.0"s;
 
 const auto red = "\033[1;31m"s;
-const auto white = "\033[1;37m"s;
 const auto blue = "\033[1;34m"s;
+const auto bold = "\033[;1m"s;
 const auto reset = "\033[0m"s;
 
 inline auto contains(std::string const& a, std::string const& b) -> bool
@@ -25,8 +25,8 @@ auto main(int argv, char** args) -> int
 
     std::stringstream ss;
 
-    // Prepare a blue arrow followed by white text
-    ss << "  "s << blue << "->"s << white;
+    // Prepare a blue arrow followed by bold text
+    ss << "  "s << blue << "->"s << bold;
 
     // If the first argument is a string containing one or more "%s",
     // use it as a format string where "%s" are replaced by the following arguments.
