@@ -6,8 +6,9 @@ favicon: msg2.ico
 
 # msg2
 
-* A way to output a blue arrow and a white message on the commandline.
+* A way to output a blue arrow and a bold message on the commandline.
 * A commandline utility written in C++.
+* The first argument may be a format string where `%s`'s are replaced with the rest of the arguments.
 
 ## Screenshot
 

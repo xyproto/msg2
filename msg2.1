@@ -1,15 +1,18 @@
-.TH "msg2" 1 "17 Oct 2018" "" ""
+.TH "msg2" 1 "18 Oct 2018" "" ""
 .SH NAME
-msg2 \- output a blue arrow followed by white text
+msg2 \- output a blue arrow followed by gray text
 .SH SYNOPSIS
 .B msg2
 .IR message ...
 .SH DESCRIPTION
 .B msg2
 outputs a blue arrow followed by all given arguments,
-as a space separated white string.
+as a space separated string of bold text.
 .sp
 The arrow looks like this: ->
+.sp
+The first argument may be a format string, where %s's are replaced
+with the rest of the arguments.
 .SH OPTIONS
 .TP
 .BR \-v ", " \-\-version
