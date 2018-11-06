@@ -1,10 +1,14 @@
 language: cpp
 sudo: required
+os: linux
+compiler: gcc
+env:
+  - COMPILER=g++-8
+  - CCOMPILER=gcc-8
+  - CXXFLAGS=-std=c++17
 addons:
   apt:
-    packages:
-      - cmake
-      - g++8
-      - ninja
+    sources: ['ubuntu-toolchain-r-test']
+packages: ['g++-8', 'ninja-build', 'nodejs']
 script:
   - mkdir -p build && cd build && cmake .. -G Ninja && ninja
