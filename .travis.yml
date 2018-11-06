@@ -3,35 +3,20 @@ sudo: true
 
 matrix:
   include:
-
-    # Linux C++17 GCC builds
     - os: linux
-      compiler: gcc
-      addons: &gcc8
+      dist: trusty
+      addons:
         apt:
-          sources: ['ubuntu-toolchain-r-test']
-          packages: ['g++-8']
-      env: COMPILER='g++-8' BUILD_TYPE='Release'
-
-    - os: linux
+          packages:
+            - g++-8
+          sources: &sources
+            - ubuntu-toolchain-r-test
+      env:
+        - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8
+        - COMPILER='g++-8' BUILD_TYPE='Release'
       compiler: gcc
-      addons: *gcc8
-      env: COMPILER='g++-8' BUILD_TYPE='Debug'
-
-install:
-  - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
-  - mkdir -p ${DEPS_DIR} && cd ${DEPS_DIR}
-  - |
-    if [[ "${TRAVIS_OS_NAME}" == "linux" ]]; then
-      CMAKE_URL="http://www.cmake.org/files/v3.3/cmake-3.3.2-Linux-x86_64.tar.gz"
-      mkdir cmake && travis_retry wget --no-check-certificate --quiet -O - ${CMAKE_URL} | tar --strip-components=1 -xz -C cmake
-      export PATH=${DEPS_DIR}/cmake/bin:${PATH}
-    elif [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then
-      which cmake || brew install cmake
-    fi
 
 before_script:
-  - export CXX=${COMPILER}
   - cd ${TRAVIS_BUILD_DIR}
   - cmake -H. -BBuild -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -Wdev
   - cd Build
