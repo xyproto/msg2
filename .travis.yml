@@ -9,13 +9,14 @@ matrix:
         apt:
           packages:
             - g++-8
+            - ninja-build
           sources: &sources
             - ubuntu-toolchain-r-test
       compiler: gcc
 
 before_script:
-  - cd "${TRAVIS_BUILD_DIR}"
-  - cmake -H. -B build -DCMAKE_CXX=g++ -DCMAKE_BUILD_TYPE=Release
+  - mkdir -p build && cd build
+  - cmake .. -DCMAKE_CXX=g++ -DCMAKE_BUILD_TYPE=Release -G Ninja
 
 script:
-  - make -C build -j 2
+  - ninja
