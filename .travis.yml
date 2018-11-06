@@ -3,5 +3,7 @@ addons:
   apt:
     packages:
       - cmake
+      - g++8
+      - ninja
 script:
-  - mkdir -p build && cd build && cmake .. && make
+  - mkdir -p build && cd build && cmake .. -G Ninja && ninja
