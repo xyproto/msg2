@@ -11,15 +11,11 @@ matrix:
             - g++-8
           sources: &sources
             - ubuntu-toolchain-r-test
-      env:
-        - MATRIX_EVAL="CC=gcc-8 && CXX=g++-8
-        - COMPILER='g++-8' BUILD_TYPE='Release'
       compiler: gcc
 
 before_script:
-  - cd ${TRAVIS_BUILD_DIR}
-  - cmake -H. -BBuild -DCMAKE_BUILD_TYPE=${BUILD_TYPE} -Wdev
-  - cd Build
+  - cd "${TRAVIS_BUILD_DIR}"
+  - cmake -H. -B build -DCMAKE_CXX=g++ -DCMAKE_BUILD_TYPE=Release
 
 script:
-  - make -j 2
+  - make -C build -j 2
