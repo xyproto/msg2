@@ -16,7 +16,7 @@ matrix:
 
 before_script:
   - mkdir -p build && cd build
-  - cmake .. -DCMAKE_CXX=g++ -DCMAKE_BUILD_TYPE=Release -G Ninja
+  - cmake .. -DCMAKE_CXX=g++-8 -DCMAKE_BUILD_TYPE=Release -G Ninja
 
 script:
   - ninja
