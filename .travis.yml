@@ -4,46 +4,19 @@ sudo: true
 matrix:
   include:
 
-    # Linux C++14 GCC builds
+    # Linux C++17 GCC builds
     - os: linux
       compiler: gcc
-      addons: &gcc6
+      addons: &gcc8
         apt:
           sources: ['ubuntu-toolchain-r-test']
-          packages: ['g++-6']
-      env: COMPILER='g++-6' BUILD_TYPE='Release'
+          packages: ['g++-8']
+      env: COMPILER='g++-8' BUILD_TYPE='Release'
 
     - os: linux
       compiler: gcc
-      addons: *gcc6
-      env: COMPILER='g++-6' BUILD_TYPE='Debug'
-
-    # Linux C++14 Clang builds
-    - os: linux
-      compiler: clang
-      addons: &clang38
-        apt:
-          sources: ['llvm-toolchain-precise-3.8', 'ubuntu-toolchain-r-test']
-          packages: ['clang-3.8']
-      env: COMPILER='clang++-3.8' BUILD_TYPE='Release'
-
-    - os: linux
-      compiler: clang
-      addons: *clang38
-      env: COMPILER='clang++-3.8' BUILD_TYPE='Debug'
-
-    # OSX C++14 Clang Builds
-
-    - os: osx
-      osx_image: xcode8.3
-      compiler: clang
-      env: COMPILER='clang++' BUILD_TYPE='Debug'
-
-    - os: osx
-      osx_image: xcode8.3
-      compiler: clang
-      env: COMPILER='clang++' BUILD_TYPE='Release'
-
+      addons: *gcc8
+      env: COMPILER='g++-8' BUILD_TYPE='Debug'
 
 install:
   - DEPS_DIR="${TRAVIS_BUILD_DIR}/deps"
@@ -65,4 +38,3 @@ before_script:
 
 script:
   - make -j 2
-  - ctest -V -j 2
