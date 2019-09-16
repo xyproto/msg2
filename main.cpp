@@ -48,7 +48,7 @@ auto main(int argv, char** args) -> int
                     std::cerr << red << "error: "s << reset
                               << "too many arguments for format string \""s << args[1] << "\":"s
                               << argss.str() << std::endl;
-                    std::exit(EXIT_FAILURE);
+                    return EXIT_FAILURE;
                 }
             }
             // All instances of "%s" should now be replaced
@@ -61,7 +61,7 @@ auto main(int argv, char** args) -> int
                 std::cerr << red << "error: "s << reset
                           << "too few arguments for format string \""s << args[1] << "\":"s
                           << argss.str() << std::endl;
-                std::exit(EXIT_FAILURE);
+                return EXIT_FAILURE;
             }
         }
         ss << " "s << s;
