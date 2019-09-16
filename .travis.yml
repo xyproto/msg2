@@ -8,14 +8,14 @@ matrix:
       addons:
         apt:
           packages:
-            - g++-8
+            - g++-9
             - ninja-build
           sources: &sources
             - ubuntu-toolchain-r-test
       compiler: gcc
 
 before_script:
-  - mkdir -p build && cd build && cmake .. -DCMAKE_CXX_COMPILER=g++-8 -DCMAKE_BUILD_TYPE=Release -G Ninja
+  - mkdir -p build && cd build && cmake .. -DCMAKE_CXX_COMPILER=g++-9 -DCMAKE_BUILD_TYPE=Release -G Ninja
 
 script:
   - ninja
