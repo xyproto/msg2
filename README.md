@@ -1,7 +1,5 @@
 # msg2
 
-[![Packaging status](https://repology.org/badge/vertical-allrepos/msg2.svg)](https://repology.org/project/msg2/versions)
-
 * A way to output a blue arrow and a bold message on the commandline.
 * A commandline utility written in C++.
 * The first argument may be a format string where `%s`'s are replaced with the rest of the arguments.
@@ -19,8 +17,7 @@
 
 ## Distro Packages
 
-* Void Linux: `msg2`
-* Arch Linux: `msg2` (in AUR)
+[![Packaging status](https://repology.org/badge/vertical-allrepos/msg2.svg)](https://repology.org/project/msg2/versions)
 
 ## Version
 
